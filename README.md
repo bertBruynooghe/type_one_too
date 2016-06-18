@@ -1,4 +1,4 @@
-### TypeOneToo
+# TypeOneToo
 
 TypeOneToo is een emaildistributiesysteem waarbij families van type 1 kinderen ervaringen willen delen met 
 nieuw gediagnosticeerde families of families met minder ervaring.
