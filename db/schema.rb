@@ -11,7 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160617095953) do
+ActiveRecord::Schema.define(version: 20160620192920) do
+
+  create_table "mail_configs", force: :cascade do |t|
+    t.string   "criterium"
+    t.string   "template_name"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  create_table "mail_configs_users", force: :cascade do |t|
+    t.integer "mail_config_id"
+    t.integer "user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

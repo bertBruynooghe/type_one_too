@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Mail Configs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Criterium</th>
+      <th>Template name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @mail_configs.each do |mail_config| %>
+      <tr>
+        <td><%= mail_config.criterium %></td>
+        <td><%= mail_config.template_name %></td>
+        <td><%= link_to 'Show', mail_config %></td>
+        <td><%= link_to 'Edit', edit_mail_config_path(mail_config) %></td>
+        <td><%= link_to 'Destroy', mail_config, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Mail config', new_mail_config_path %>

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Criterium:</strong>
+  <%= @mail_config.criterium %>
+</p>
+
+<p>
+  <strong>Template name:</strong>
+  <%= @mail_config.template_name %>
+</p>
+
+<%= link_to 'Edit', edit_mail_config_path(@mail_config) %> |
+<%= link_to 'Back', mail_configs_path %>
