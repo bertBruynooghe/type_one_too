@@ -1,7 +1,7 @@
 class UserMailer < ApplicationMailer
-  def welcome_email(user)
+  def parametric_email(user, mail_config)
     @user = user
-    @url  = 'http://example.com/login'
-    mail(to: @user.email, subject: 'Welcome to My Awesome Site')
+    @mail_config = mail_config
+    mail(to: @user.email, subject: 'TODO: subject from mail_config')
   end
 end
