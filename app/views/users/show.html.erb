@@ -10,5 +10,15 @@
   <%= @user.created_at %>
 </p>
 
+<p>
+  <strong>Diagnosed at:</strong>
+  <%= @user.dx_date %>
+</p>
+
+<p>
+  <strong>Year of birth:</strong>
+  <%= @user.year_of_birth %>
+</p>
+
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

@@ -19,6 +19,15 @@
     <%= f.label :role %><br>
     <%= f.text_field :role %>
   </div>
+  <div class="field">
+    <%= f.label :dx_date %><br>
+    <%= f.date_select :dx_date %>
+  </div>
+  <div class="field">
+    <%= f.label :year_of_birth %><br>
+    <%= select_year Date.today, start_year: Date.today.year - 20 , end_year: Date.today.year, field_name: :year_of_birth, prefix: :user %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

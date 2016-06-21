@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160621135932) do
+ActiveRecord::Schema.define(version: 20160621143436) do
 
   create_table "mail_configs", force: :cascade do |t|
     t.string   "criterium"
@@ -43,6 +43,8 @@ ActiveRecord::Schema.define(version: 20160621135932) do
     t.datetime "confirmation_sent_at"
     t.string   "confirmation_token"
     t.string   "unconfirmed_email"
+    t.date     "dx_date"
+    t.integer  "year_of_birth"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
