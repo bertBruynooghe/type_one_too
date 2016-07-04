@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
-    @users = User.all
+    @users = User.all.for_mail_config(params[:mail_config_id])
   end
 
   # GET /users/1

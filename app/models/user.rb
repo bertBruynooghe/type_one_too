@@ -3,4 +3,10 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_and_belongs_to_many :mail_configs
+
+  scope :for_mail_config,  -> (mail_config_id) do
+    return where(nil) unless mail_config_id
+    mail_config = MailConfig.find(mail_config_id)
+    instance_eval(mail_config.criterium)
+  end
 end

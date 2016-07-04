@@ -10,5 +10,7 @@
   <%= @mail_config.template_name %>
 </p>
 
+<%# TODO: use nested resources instead %>
+<%= link_to 'Gebruikers', users_path(mail_config_id: @mail_config.id) %> |
 <%= link_to 'Edit', edit_mail_config_path(@mail_config) %> |
 <%= link_to 'Back', mail_configs_path %>
