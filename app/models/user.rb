@@ -7,6 +7,6 @@ class User < ActiveRecord::Base
   scope :for_mail_config,  -> (mail_config_id) do
     return where(nil) unless mail_config_id
     mail_config = MailConfig.find(mail_config_id)
-    instance_eval(mail_config.criterium)
+    where(eval('"' + mail_config.criterium + '"'))
   end
 end
